@@ -17,7 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
     // withRouting() hanya memuat routes/console.php, bukan direktori ini.
     ->withCommands()
     ->withMiddleware(function (Middleware $middleware): void {
-        // Header keamanan HTTP untuk seluruh respons web (termasuk lampiran privat)
+        // Header keamanan HTTP untuk seluruh respons web (termasuk lampiran privat)......
         $middleware->web(append: [
             HeaderKeamanan::class,
         ]);
